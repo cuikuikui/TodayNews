@@ -1,0 +1,47 @@
+  <view class="body">
+
+    <view class="search" >
+
+      <navigator open-type='navigate' url="/pages/mine/mine"> 
+      <view class="icons">
+        <image src="/images/icon_mine.png"/>
+      </view>
+      </navigator>
+
+      <view class="icons" bindtap="Onsearch">
+        <image  src="/images/icon_search.png"/>
+      </view> 
+
+
+    </view>
+
+  <view  class="wpp_left">
+      <scroll-view scroll-x="true" class="scroll_box" scroll-left="{{scrollLeft}}" >
+      <block  wx:for-items="{{menu}}"  wx:key="id">
+          <text   data-url="{{item.url}}" data-text="{{item.title}}" data-id="{{item.id}}" data-scrollleft="{{index*46}}" data-index="{{index}}" class="btn {{act_index==index ?'cur':''}}"  bindtap="clickHandler" >{{item.title}}</text>
+        </block>
+      </scroll-view>
+    </view> 
+    
+  <scroll-view scroll-y="true" class="content" style="height: {{windowHeight}}px; width: {{windowWidth}}px;"scroll-y="true" bindscrolltoupper="pullDownRefresh"  bindscrolltolower="pullUpLoad">
+    <block wx:for="{{newss}}" wx:key="id">
+    <view  wx:if="{{act_index==item.grade}}">
+      <navigator open-type='navigate' url="/pages/content/content?id={{item.id}}" class="details"> 
+      <view class="info">
+          <text class=" title">{{item.title}}</text>
+          <text class=" author">作者：{{item.author}}</text>
+          <text class=" time">{{item.time}}-{{item.album}}</text>
+      </view>   
+        <image class="img" src="{{item.cover}}"></image>
+            </navigator>
+    </view>
+    </block>
+  </scroll-view>
+
+
+  </view>
+
+
+    
+
+    

@@ -1,0 +1,48 @@
+<view class="container">
+	<view class="header">
+		<view class="search">
+			<image class="icon" src="/images/icon_search.png"/>
+			<input bindinput="inputSearch" placeholder="{{placeholder}}" auto-focus/>  <!-- auto-focus:文本输入字段被设置为当页面加载时获得焦点 -->
+		</view>
+		<button class="yellow {{searchWords.length?'':'disabled'}}" size="mini" hover-class="hover" 
+          loading="{{loading}}" bindtap="setLoading" 
+          plain="{{plain}}"    bindtap="setPlain"
+          disabled="{{disabled}}" bindtap="setDisabled"	
+          bindtap="doSearch">搜索
+		</button>
+	</view>
+
+<!-- 	<view  class="result" hidden="{{!showResult}}">
+
+		<scroll-view scroll-y="true">
+			<view class="shop" wx:for="{{content}}" wx:key="id">
+				<navigator url="/page/content/content?id={{item.id}}">
+					<image src="{{item.index}}"/>
+				</navigator>
+			</view>
+			<view class="loading">努力加载中…</view>
+		</scroll-view>
+
+	</view -->
+
+
+<view  hidden="{{!showResult}}">
+<scroll-view scroll-y="true" class="content" 
+	style="height: {{windowHeight}}px; width: {{windowWidth}}px;"scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+
+  <block wx:for="{{newss}}" wx:key="id">
+   <view  wx:if="{{item.title.indexOf('妥')>=0}}" >
+     <navigator open-type='navigate' url="/pages/content/content" class="details"> 
+    <view class="info">
+        <text class=" title">{{item.title}}</text>
+        <text class=" author">作者：{{item.author}}</text>
+        <text class=" time">{{item.time}}-{{item.album}}</text>
+    </view>   
+      <image class="img" src="{{item.cover}}"></image>
+     </navigator>
+  </view>
+  </block>
+</scroll-view>
+</view>
+
+</view>

@@ -1,0 +1,44 @@
+.section {
+  width: 100%;
+  margin: 10px 0;
+}
+.title{
+  font-weight: bold;
+  padding: 0rpx 30rpx 0 30rpx;
+  width:95%;
+}
+.collect{
+	position: absolute;
+	right: 20px;
+	top: 50px;
+	margin-top: 20rpx;
+	font-size: 30rpx;
+	line-height: 2;
+	padding: 0 0.7em;
+	border: 1rpx solid;
+	border-radius: 30rpx;
+	background-color: #ADC633;
+}
+.time{
+  font-size: 30rpx;
+  padding: 0rpx 30rpx 0 20rpx;
+  width:95%; 
+}
+.infor{
+  width:100%;
+  font-size: 30rpx;
+  text-indent:20px;
+  border-top: 1px solid #E5E5E5;
+}
+.img{
+  display: flex;
+  width:100%;
+  justify-content: center; 
+}
+
+.end{
+  font-weight: bold;
+  width:100%;
+  font-size: 35rpx;
+  text-align:center;
+}

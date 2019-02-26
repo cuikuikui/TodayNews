@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/content/content",
+    "pages/logs/logs",
+    "pages/index/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FD0505",
+    "navigationBarTitleText": "军事头条",
+    "navigationBarTextStyle": "white"
+  }
+}

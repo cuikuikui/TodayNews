@@ -1,0 +1,111 @@
+<scroll-view scroll-y>
+  <block wx:for="{{newss}}" wx:key="id">
+    <view class="container">  
+        
+         <view class=" section title">{{item.title}}</view>
+         <view class="collect" bindtap="onglobaltap">{{collected?'已收藏':'收藏'}}</view>
+         <view class=" section time">时间：{{item.time}} 作者：{{item.author}} </view>
+
+         <view class=" section infor">{{item.content1}}</view>
+         <view class=" section img" >
+         <image src="{{item.picurl1}}" data-src="item"  bindtap="previewImage"></image>
+         </view>
+
+         <view class=" section infor">{{item.content2}}</view>
+         <view class=" section img">
+         <image src="{{item.picurl2}}" data-src="item" bindtap="previewImage"></image>
+         </view>
+
+         <view class=" section infor">{{item.content3}}</view>
+         <view class=" section img">
+         <image src="{{item.picurl3}}"  data-src="item" bindtap="previewImage"></image>
+         </view>
+         <view class=" section infor">{{item.content4}}</view>
+   </view>
+  </block>
+    <view  class="section end"> 片来源网络，感谢阅读，欢迎留言。 </view>
+</scroll-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- scroll-view scroll-y>
+<view class="container">
+
+<view class=" section title">
+中国人这次绝不妥协！面对盛气凌人的欧洲巨头，我们不愿再让步！
+</view>
+ <view class="collect" bindtap="onglobaltap">{{collected?'已收藏':'收藏'}}</view>
+
+<view class="section time">
+2018-01-21 20:51:15 作者：稀里糊涂
+</view>
+
+<view  class="section infor">
+众所周知，中国作为世界上最大的航空市场之一，每年都要花费好几百亿美元向美国波音和空客公司订购各类型的客机，而波音和空客也依靠着近乎于垄断的地位赚得盆满钵满。
+</view>
+
+<view class=" section img">
+<image src="{{url}}"></image>
+</view>
+
+<view  class="section infor">
+虽然我们能造航母，能造氢弹，能发射航空卫星，然而航空领域却一直是中国的一块短板。不过随着中国C-919客机的成功研发，以及后续CR-929客机项目的开展，这种情况正在得到一定程度上的改变。而中国在购买客机的底气上也越来越足
+</view>
+
+<view class=" section img">
+<image src="{{url1}}"></image>
+</view>
+
+<view  class="section infor">
+据媒体报道，中国日前和法国签署的180架空客订单可能出现变化，甚至是打水漂。原来刚刚访问中国的法国总统直到离开时都未能与中国协商好关于这180架空客的最终归宿，法国在价格上一直都不肯做出让步。而据有关机构估算，这180多架的A320客机总价值将超过1220亿人民币。也难怪法国一直在与中国协商，而不愿意撤出中国市场。
+</view>
+
+<view class=" section img">
+<image style="height:400rpx" src="{{url2}}"></image>
+</view>
+
+<view  class="section infor">
+要说在以前，向来是别人说多少我们就只能给多少，竞价谈判还要一直看别人的脸色，不过随着中国拥有了自己的飞机，无疑是增加了我们在国际上的竞价筹码，说话的底气也越来越足，如果欧洲各大航空公司还抱着以前的态度，随意提高价格，那最后我们也只能说不！
+</view>
+
+<view  class="section end">
+  片来源网络，感谢阅读，欢迎留言。
+</view>
+
+</view> -->
+<!-- 
+</scroll-view> -->
+
+
+
